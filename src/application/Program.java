@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import model.dao.DaoFactory;
+import model.dao.DepartmentDao;
 import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
@@ -16,7 +17,7 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		SellerDao sellerDao = new DaoFactory().createSellerDao();
-		
+				
 		System.out.println("=== TESTE 1: findById ===");
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
